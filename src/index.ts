@@ -2,11 +2,11 @@ import { createClient, RedisClientType } from "redis";
 
 class RedisClient {
   private client: RedisClientType;
-  private readonly maxRetries = 2;
+  private readonly maxRetries = 10;
   private readonly retryInterval = 1000;
   private readonly username = "";
   private readonly password = "";
-  private readonly host = "test";
+  private readonly host = "localhost";
   private readonly port = 6379;
 
   constructor() {
